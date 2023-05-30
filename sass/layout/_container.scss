@@ -1,0 +1,33 @@
+@use '../abstract/mixins' as m;
+
+.container{
+   width:90%;
+}
+
+@include m.media-sm {
+   .container {
+      width:600px;
+   }
+}
+
+
+@include m.media-md {
+   .container {
+      width:700px;
+   }
+}
+
+
+@include m.media-lg {
+   .container {
+      width:900px;
+   }
+}
+
+
+@include m.media-xl {
+   .container {
+      width:1000px;
+   }
+}
+

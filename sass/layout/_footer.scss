@@ -1,0 +1,19 @@
+@use '../abstract/variables' as v;
+@use '../abstract/functions' as f;
+@use '../abstract/mixins' as m;
+
+
+.footer {
+   padding: 20px 40px;
+   text-align: center;
+   color: f.set-text-color(v.$primary-bg-color);
+   background-color:  v.$primary-bg-color;
+}
+
+@include m.media-md{
+   .footer{
+      position:fixed;
+      bottom:0;
+      width:100%;
+   }
+}

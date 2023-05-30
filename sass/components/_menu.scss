@@ -1,0 +1,39 @@
+@use '../abstract/variables' as v;
+@use '../abstract/functions' as f;
+@use '../abstract/mixins' as m;
+
+.nav {
+   display:flex;
+   align-items: center;
+   justify-content: space-between;
+   width:100%;
+   padding:20px;
+   background-color: v.$primary-bg-color;
+
+   &__brand {
+      font-size:36px;
+      color: f.set-text-color(v.$primary-bg-color);
+   }
+}
+
+.nav-menu {
+   display:none;
+   align-items: center;
+   list-style: none;
+
+   &__item {
+      padding: 10px 20px;
+   }
+
+   &__link {
+      color:f.set-text-color(v.$primary-bg-color)
+   }
+
+
+}
+
+@include m.media-sm {
+   .nav-menu {
+      display:flex;
+   }
+}
